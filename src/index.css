@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+
+}
+
+:root {
+  --clr-red: #FF8080;
+  --clr-yellow: #F6FDC3;
+  --clr-green:  #CDFAD5;
+  --clr-bg: #132043;
+  --clr-text: #EEEEEE;
+}
+
+body {
+  font-family: Roboto, Ubuntu, Nato Sans, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-itmes: center;
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.5;
+}
+
+.cool-header {
+  /* background-color: var(--clr-red);  */
+  position: relative;
+  --rotate: -3deg;
+}
+.original-text {
+  z-index: 1;
+  position: relative;
+  top: 40px;
+  line-height: 1;
+  text-align: center;
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  letter-spacing: -0.2rem;
+  word-spacing: 1rem;
+  transform: rotate(var(--rotate));
+  transition: 200ms;
+  text-shadow: -1px -1px 0 var(--clr-bg), 3px 5px 0 var(--clr-bg), 2px 4px 0 var(--clr-bg), 1px 3px 0 var(--clr-bg);
+}
+
+.description-text {
+
+}
+.tooltip {
+
+} 
+.color-red, .color-green, .color-yellow {
+  transform: rotate(var(--rotate));
+  height: 60%;
+  width: 18px;
+  position: absolute;
+  --initial-pos-x: 48px; 
+  --initial-pos-y: 15px; 
+  transition: 200ms;
+}
+.color-red {
+  top: calc(var(--initial-pos-y) + 2px);
+  right: calc(var(--initial-pos-x) + 32px);
+  background-color: var(--clr-red);
+}
+.color-yellow {
+  top: calc(var(--initial-pos-y) + 1px);
+  right: calc(var(--initial-pos-x) + 16px);
+  background-color: var(--clr-yellow);
+}
+.color-green {
+  top: calc(var(--initial-pos-y));
+  right: calc(var(--initial-pos-x));
+  background-color: var(--clr-green);
+}
+
+.cool-header:hover .original-text {
+  text-shadow: -1px -1px 0 var(--clr-bg), 8px 9px 0 var(--clr-bg), 7px 8px 0 var(--clr-bg), 6px 7px 0 var(--clr-bg), 5px 6px 0 var(--clr-bg), 4px 5px 0 var(--clr-bg), 3px 5px 0 var(--clr-bg), 2px 4px 0 var(--clr-bg), 1px 3px 0 var(--clr-bg);
+}
+.cool-header:hover .color-red {
+  width: 86%;
+  top: calc(var(--initial-pos-y) + 23px)
+}
+.cool-header:hover .color-yellow {
+  width: 30%;
+  top: calc(var(--initial-pos-y) + 8px)
+}
+.cool-header:hover .color-green {
+  width: 16%;
+  top: calc(var(--initial-pos-y) + 4px)
+}
